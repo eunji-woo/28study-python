@@ -19,8 +19,8 @@ while True:
                 score.append(i)
                 if i < best: # 정답을 맞췄을 때 시도 횟수가 best보다 작을 경우 best를 i로 초기화
                     print("최고기록 갱신~!")
-                    best = i
-                break
+                    best = i # best 변수에 시도횟수 저장
+                break  # 정답인 경우 종료
             else:
                 if number > answer:
                     end = number
