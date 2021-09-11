@@ -31,11 +31,15 @@ while True:
 
     elif menu == '2':
         record = set(score)  # 중복 제거
-        list(record).sort() # 오름차순 정리
+        record = list(record)  # 오름차순 정리
+        record.sort()
         index = 1
         for i in record:
             print("%d %d" %(index, i))
             index = index + 1
 
-    else: # 1과 2를 제외한 값이 입력되면 종료
+    elif menu == '3':
         break
+
+    else: # 1과 2, 3를 제외한 값이 입력되면 종료
+        print("다시 입력해주세요")
