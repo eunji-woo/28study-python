@@ -4,9 +4,9 @@ from datetime import datetime
 record = [] # 최고기록들 저장하는 리스트
 
 f = open("c:/python28/updown_record.txt", 'r')
-best = f.readlines()
+best = f.readlines() # 파일에서 한 줄을 읽어와봄 ( 밑에서 이전 기록이 있는지 없는지 판단하기 위해서 )
 
-if best:
+if best: # 파일에 이전 기록이 있으면
     record.append(int(best[-1].split(' ')[0]))  # 파일에서 이전의 최고기록만 읽어와서 현재 프로그램의 최고기록으로 저장
 f.close()
 
