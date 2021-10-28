@@ -3,12 +3,16 @@ from datetime import datetime
 
 record = [] # 최고기록들 저장하는 리스트
 
-f = open("c:/python28/updown_record.txt", 'r')
+
+##### 2주차 피드백 - 파일이 없는 경우 생성되도록 수정 (파일 open 옵션을 w에서 a+로 변경 #######
+f = open("c:/python28/updown_record.txt", 'a+')   
 best = f.readlines() # 파일에서 한 줄을 읽어와봄 ( 밑에서 이전 기록이 있는지 없는지 판단하기 위해서 )
 
 if best: # 파일에 이전 기록이 있으면
     record.append(int(best[-1].split(' ')[0]))  # 파일에서 이전의 최고기록만 읽어와서 현재 프로그램의 최고기록으로 저장
 f.close()
+
+
 
 while True:
     answer = random.randrange(1, 101)  # 1부터 100까지의 난수 값 생성
