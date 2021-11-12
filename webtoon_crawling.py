@@ -13,10 +13,7 @@ os.chdir("겟백")
 web = urllib.request.urlopen('https://comic.naver.com/webtoon/list?titleId=727798')
 soup = BeautifulSoup(web, 'html.parser')
 
-webtoon_list = []
-webtoon_img_list = []
 webtoon = soup.findAll('td', {"class": "title"})
-
 count = 1
 
 for i in range(0,10):
@@ -34,4 +31,4 @@ for i in range(0,10):
     os.chdir('../')
     count = 1 # 다음 회차로 넘어가기 전 다시 count 1로 초기화
 
-print("종료") # 모든 회차 크롤링 후 종료 메시지
+print("종료")
